@@ -50,4 +50,7 @@
     .modal-container {
         max-width: 90%;
     }
+    .modal-container span {
+        font-size: 80%;
+    }
 }

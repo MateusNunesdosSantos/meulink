@@ -5,6 +5,7 @@ import './home.css'
 import Menu from '../../components/Menu';
 import LinkItem from '../../components/LinkItem';
 import api from '../../services/api';
+import { saveLink } from '../../services/storeLinks'
 
 function Home() {
 const [link, setLink] = useState('');
@@ -21,6 +22,11 @@ async function handleShortLink() {
 
     setData(response.data);
     setShowModal(true);
+
+
+    saveLink('@encurtalink', response.data)
+
+
     setLink('');
 
 
